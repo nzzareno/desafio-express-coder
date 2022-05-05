@@ -47,7 +47,13 @@ class Contenedor {
 
   async getAll() {
     let type = await this.fileInJSON();
-    return console.log(type);
+    return console.log(type) || type;
+  }
+
+  async getRandom() {
+    let type = await this.fileInJSON();
+    let product = type[Math.floor(Math.random() * type.length)];
+    return product;
   }
 
   async deleteAll() {
