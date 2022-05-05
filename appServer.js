@@ -5,7 +5,7 @@ const Contenedor = require("./app.js");
 const newShoeProduct = new Contenedor("./products.txt");
 
 app.get("/", (req, res) => {
-  res.send("Ingresa a la ruta /productos para ver los productos :D");
+  res.send("Enter the route /products to see the products :D");
 });
 
 app.get("/productos", async (req, res) => {
@@ -15,7 +15,6 @@ app.get("/productos", async (req, res) => {
 app.get("/productoRandom", async (req, res) => {
   res.send(JSON.stringify(await newShoeProduct.getRandom()));
 });
-
 
 const sv = app
   .listen(PORT, () => {
