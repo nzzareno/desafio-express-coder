@@ -5,7 +5,7 @@ const Contenedor = require("./app.js");
 const newShoeProduct = new Contenedor("./products.txt");
 
 app.get("/", (req, res) => {
-  res.send("Enter the route /products to see the products :D");
+  res.send("Enter the route /productos to see the products :D");
 });
 
 app.get("/productos", async (req, res) => {
