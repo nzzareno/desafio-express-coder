@@ -9,11 +9,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/productos", async (req, res) => {
-  res.send(JSON.stringify(await newShoeProduct.getAll()));
+  res.json(await newShoeProduct.getAll());
 });
 
 app.get("/productoRandom", async (req, res) => {
-  res.send(JSON.stringify(await newShoeProduct.getRandom()));
+  res.json(await newShoeProduct.getRandom());
 });
 
 const sv = app
